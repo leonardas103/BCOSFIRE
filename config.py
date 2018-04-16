@@ -51,7 +51,9 @@ class COSFIRE:
 # # Parameters of some geometric invariances
 class invariance:
     numoriens = 12
-    rotation_psilist    = [i for i in numpy.arange(0, math.pi, math.pi/numoriens)]
+    rotation_psilist = [i for i in numpy.arange(0, math.pi, math.pi/numoriens)]
+    def set_rotation_psilist(self,numoriens, n):    
+        self.rotation_psilist = [i for i in numpy.arange(0, n*math.pi, n*math.pi/numoriens)]
     scale_upsilonlist   = 1 #2.^((0)./2)
 
     # Reflection invariance about the y-axis. 0 = do not use, 1 = use.
